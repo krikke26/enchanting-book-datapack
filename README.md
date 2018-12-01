@@ -1,3 +1,5 @@
+(WORK IN PROGRESS)
+
 # Enchanting book crafting datapack
 This datapack for minecraft allows you to "craft" enchanting books.
 
