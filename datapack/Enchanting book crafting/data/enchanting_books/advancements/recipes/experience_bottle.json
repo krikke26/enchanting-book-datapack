@@ -2,7 +2,7 @@
     "parent": "minecraft:recipes/root",
     "rewards": {
         "recipes": [
-            "anvil_enchanter:xp_bottle"
+            "enchanting_books:xp_bottle"
         ]
     },
     "criteria": {
@@ -39,7 +39,7 @@
         "has_the_recipe": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "anvil_enchanter:xp_bottle"
+                "recipe": "enchanting_books:xp_bottle"
             }
         }
     },

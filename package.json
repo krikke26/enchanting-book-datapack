@@ -1,0 +1,19 @@
+{
+    "name": "enchanting-book-crafting",
+    "version": "1.0.0",
+    "description": "This datapack for minecraft allows you to \"craft\" enchanting books.",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "node function_generator/generate-book-crafting.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/krike/enchanting-book-datapack.git"
+    },
+    "author": "Christophe Debruel",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/krike/enchanting-book-datapack/issues"
+    },
+    "homepage": "https://github.com/krike/enchanting-book-datapack#readme"
+}
