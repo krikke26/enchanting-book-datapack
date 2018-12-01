@@ -1,0 +1,30 @@
+{
+    "type": "crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "minecraft:obsidian"
+        },
+        {
+            "item": "minecraft:obsidian"
+        },
+        {
+            "item": "minecraft:obsidian"
+        },
+        {
+            "item": "minecraft:experience_bottle"
+        },
+        {
+            "item": "minecraft:experience_bottle"
+        },
+        {
+            "item": "minecraft:experience_bottle"
+        },
+        {
+            "item": "minecraft:writable_book"
+        }
+    ],
+    "result": {
+        "item": "minecraft:enchanted_book",
+        "count": 1
+    }
+}

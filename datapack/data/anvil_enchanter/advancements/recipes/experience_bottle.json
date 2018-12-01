@@ -1,0 +1,54 @@
+{
+    "parent": "minecraft:recipes/root",
+    "rewards": {
+        "recipes": [
+            "anvil_enchanter:xp_bottle"
+        ]
+    },
+    "criteria": {
+        "has_slime": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:slime_ball"
+                    }
+                ]
+            }
+        },
+        "has_bottle": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:glass_bottle"
+                    }
+                ]
+            }
+        },
+        "has_cactus_green": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:cactus_green"
+                    }
+                ]
+            }
+        },
+        "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "anvil_enchanter:xp_bottle"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_slime",
+            "has_bottle",
+            "has_cactus_green",
+            "has_the_recipe"
+        ]
+    ]
+}

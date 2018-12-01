@@ -1,0 +1,23 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "SGS",
+        "GBG",
+        "SGS"
+    ],
+    "key": {
+        "S": {
+            "item": "minecraft:slime_ball"
+        },
+        "G": {
+            "item": "minecraft:cactus_green"
+        },
+        "B": {
+            "item": "minecraft:glass_bottle"
+        }
+    },
+    "result": {
+        "item": "minecraft:experience_bottle",
+        "count": 2
+    }
+}
