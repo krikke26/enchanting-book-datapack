@@ -29,8 +29,6 @@ function generateFunctionFile(filename, content) {
             bookTemplate = bookTemplate.replace("[$stored_enchantments_id]", content.main_options.stored_enchantments_id);
             bookTemplate = bookTemplate.replace("[$stored_enchantments_lvl]", book.stored_enchantments_lvl);
 
-            //console.log(bookTemplate);
-
             //save each book to file
             var outputFileName = book.name;
             outputFileName = outputFileName.toLowerCase();

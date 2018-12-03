@@ -4,7 +4,7 @@
     "description": "This datapack for minecraft allows you to \"craft\" enchanting books.",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "node function_generator/generate-book-crafting.js"
+        "build": "node function_generator/generate.js"
     },
     "repository": {
         "type": "git",
