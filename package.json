@@ -15,5 +15,8 @@
     "bugs": {
         "url": "https://github.com/krike/enchanting-book-datapack/issues"
     },
-    "homepage": "https://github.com/krike/enchanting-book-datapack#readme"
+    "homepage": "https://github.com/krike/enchanting-book-datapack#readme",
+    "devDependencies": {
+        "underscore": "^1.9.1"
+    }
 }

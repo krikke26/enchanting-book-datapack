@@ -1,5 +1,2 @@
 #Books----------------------------------------------------
-
-#[book-start]
-function enchanting_books:books/unbreaking
-#[book-end]
+function enchanting_books:book_list
