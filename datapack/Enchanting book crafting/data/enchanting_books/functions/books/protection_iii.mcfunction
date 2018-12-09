@@ -1,6 +1,6 @@
-#Unbreaking III book
+#Protection III book
 
-execute as @r at @s as @e[type=item,distance=..6,nbt={OnGround:1b,Item:{id:"minecraft:obsidian",Count:48b}}] at @s run tag @s add drop_obsidian
+execute as @r at @s as @e[type=item,distance=..6,nbt={OnGround:1b,Item:{id:"minecraft:iron_ingot",Count:24b}}] at @s run tag @s add drop_iron_ingot
 execute as @r at @s as @e[type=item,distance=..6,nbt={OnGround:1b,Item:{id:"minecraft:lapis_lazuli",Count:12b}}] at @s run tag @s add drop_lapis_lazuli
 execute as @r at @s as @e[type=item,distance=..6,nbt={OnGround:1b,Item:{id:"minecraft:writable_book",Count:1b}}] at @s run tag @s add drop_writable_book
 
@@ -10,4 +10,4 @@ execute as @e[tag=drop_writable_book] at @s if entity @e[tag=drop_enchanted_book
 execute as @e[type=item,tag=craft_event] at @s run kill @e[tag=[$ingredient_2_output_name],distance=..1,limit=1]
 execute as @e[type=item,tag=craft_event] at @s run kill @e[tag=drop_enchanted_book,distance=..1,limit=1]
 execute as @e[type=item,tag=craft_event] at @s run playsound minecraft:entity.experience_orb.pickup master @a
-execute as @e[type=item,tag=craft_event] at @s run data merge entity @s {Motion:[0.0,0.3,0.0],Tags:[],Item:{id:"minecraft:enchanted_book",Count:1b,tag:{StoredEnchantments:[{id:"minecraft:unbreaking",lvl:3}]}}}
+execute as @e[type=item,tag=craft_event] at @s run data merge entity @s {Motion:[0.0,0.3,0.0],Tags:[],Item:{id:"minecraft:enchanted_book",Count:1b,tag:{StoredEnchantments:[{id:"minecraft:protection",lvl:3}]}}}
