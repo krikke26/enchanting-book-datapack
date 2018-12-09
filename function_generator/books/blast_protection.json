@@ -1,33 +1,39 @@
 {
     "main_options": {
         "ingredient_1": {
-            "name": "minecraft:obsidian",
-            "output_name": "drop_obsidian"
+            "name": "minecraft:gunpowder",
+            "output_name": "drop_gunpowder"
         },
         "ingredient_2": {
             "name": "minecraft:lapis_lazuli",
             "output_name": "drop_lapis_lazuli"
         },
-        "stored_enchantments_id": "minecraft:unbreaking"
+        "stored_enchantments_id": "minecraft:blast_protection"
     },
     "books": [
         {
-            "name": "Unbreaking I",
+            "name": "Blast protection I",
             "ingredient_1_count": 16,
             "ingredient_2_count": 4,
             "stored_enchantments_lvl": 1
         },
         {
-            "name": "Unbreaking II",
+            "name": "Blast protection II",
             "ingredient_1_count": 32,
             "ingredient_2_count": 8,
             "stored_enchantments_lvl": 2
         },
         {
-            "name": "Unbreaking III",
+            "name": "Blast protection III",
             "ingredient_1_count": 48,
             "ingredient_2_count": 12,
             "stored_enchantments_lvl": 3
+        },
+        {
+            "name": "Blast protection IV",
+            "ingredient_1_count": 64,
+            "ingredient_2_count": 24,
+            "stored_enchantments_lvl": 4
         }
     ]
 }

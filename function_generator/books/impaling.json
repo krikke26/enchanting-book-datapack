@@ -1,0 +1,45 @@
+{
+    "main_options": {
+        "ingredient_1": {
+            "name": "minecraft:cooked_fish",
+            "output_name": "drop_cooked_fish"
+        },
+        "ingredient_2": {
+            "name": "minecraft:lapis_lazuli",
+            "output_name": "drop_lapis_lazuli"
+        },
+        "stored_enchantments_id": "minecraft:impaling"
+    },
+    "books": [
+        {
+            "name": "Impaling I",
+            "ingredient_1_count": 8,
+            "ingredient_2_count": 4,
+            "stored_enchantments_lvl": 1
+        },
+        {
+            "name": "Impaling II",
+            "ingredient_1_count": 16,
+            "ingredient_2_count": 8,
+            "stored_enchantments_lvl": 2
+        },
+        {
+            "name": "Impaling III",
+            "ingredient_1_count": 24,
+            "ingredient_2_count": 12,
+            "stored_enchantments_lvl": 3
+        },
+        {
+            "name": "Impaling IV",
+            "ingredient_1_count": 32,
+            "ingredient_2_count": 16,
+            "stored_enchantments_lvl": 4
+        },
+        {
+            "name": "Impaling V",
+            "ingredient_1_count": 48,
+            "ingredient_2_count": 20,
+            "stored_enchantments_lvl": 5
+        }
+    ]
+}
