@@ -63,7 +63,7 @@ _.extend(bookCrafting.prototype, {
             //save each book to file
             let outputFileName = book.name;
             outputFileName = outputFileName.toLowerCase();
-            outputFileName = outputFileName.replace(" ", "_");
+            outputFileName = outputFileName.split(' ').join('_');
             this.bookList.push(outputFileName);
             outputFileName = outputFileName + ".mcfunction";
 
@@ -75,7 +75,6 @@ _.extend(bookCrafting.prototype, {
     },
 
     updateGameLoop: function() {
-        console.log(this.bookList);
         let bookListTemplate = "";
         this.bookList.forEach((bookName) => {
             bookListTemplate += `function enchanting_books:books/${bookName}\n`;
