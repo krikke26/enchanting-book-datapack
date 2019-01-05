@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enchanting book crafting datapack for minecraft</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+    <style>
+        * {
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        body {
+            color: #606c71;
+        }
+        .container {
+            max-width: 960px;
+        }
+        .jumbotron {
+            background: #212529;
+            color: #FFF;
+        }
+        table tr td {
+            vertical-align: middle;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        section {
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="jumbotron text-center">
+        <div class="container">
+            <h1 class="display-4">
+                Enchanter datapack
+            </h1>
+            <p class="lead">
+                Minecrat Datapack to "craft" enchanting books.
+            </p>
+            <a class="btn btn-primary " href="https://github.com/krike/enchanting-book-datapack" role="button">
+                View on github
+            </a>
+            <a class="btn btn-primary" href="#" role="button">
+                Download
+            </a>
+        </div>
+    </div>
+    <div class="container">
+        <section>
+            <h2>Install</h2>
+            <ul>
+                <li>Download latest version</li>
+                <li>Place the zip file in the datapack folder of your world</li>
+                <li>Start crafting! :)</li>
+            </ul>
+        </section>
+        <hr />
+        <section>
+            <h2>How to use</h2>
+            <p>
+                Unfortunatly it is not possible to craft enchanting books the regular way using a crafting
+                table therefore the way to use this datapack is to ... just drop the ingredients on the ground together :).
+                The game tick will detect and drop a book based on the ingredients dropped.
+            </p>
+        </section>
+        <hr />
+        <section>
+            <h2>Recipes</h2>
+            {% for bookInfo in books %}
+                <h5>{{ bookInfo.books[0].name }}</h5>
+                <table cellpadding="5" cellspacing="0" border="0" class="table">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th>Ingredients</th>
+                        <th>Book</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for book in bookInfo.books %}
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>{{ book.ingredient_1_count }} {{ bookInfo.main_options.ingredient_1.name|replace({"minecraft:": "", "_": " "})|capitalize }}</li>
+                                    <li>{{ book.ingredient_2_count }} {{ bookInfo.main_options.ingredient_2.name|replace({"minecraft:": "", "_": " "})|capitalize }}</li>
+                                </ul>
+                            </td>
+                            <td>{{ book.name }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            {% endfor %}
+
+        </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>

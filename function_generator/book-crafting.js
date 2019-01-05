@@ -1,4 +1,5 @@
 let fs = require("fs"),
+    path = require("path"),
     _ = require("underscore"),
     logHandler = require("./Utils/log_handler"),
     bookCrafting = function() { };
@@ -8,6 +9,7 @@ _.extend(bookCrafting.prototype, {
     functionsFolder: "./datapack/Enchanting book crafting/data/enchanting_books/functions/",
     outputFolder: "",
     bookList: [],
+    booksDetails: [],
 
     init: function() {
         this.outputFolder = `${this.functionsFolder}books/`;
@@ -28,14 +30,16 @@ _.extend(bookCrafting.prototype, {
             logHandler.error(err);
             filenames.forEach((filename) => {
                 fs.readFile(this.bookFolder + filename, 'utf-8', (err, content) => {
+                    this.booksDetails.push(JSON.parse(content));
                     this.generateFunctionFile(filename, content);
                     logHandler.error(err);
                 });
             });
-            console.log("done looping");
         });
+
+        // need to find a way to see when the files are created and then update the gameloop
         setTimeout(() => {
-            this.updateGameLoop();
+            this.onFinishBooks();
         },2000);
     },
 
@@ -74,6 +78,11 @@ _.extend(bookCrafting.prototype, {
         });
     },
 
+    onFinishBooks: function() {
+        this.updateGameLoop();
+        this.generateDocs();
+    },
+
     updateGameLoop: function() {
         let bookListTemplate = "";
         this.bookList.forEach((bookName) => {
@@ -82,6 +91,25 @@ _.extend(bookCrafting.prototype, {
         fs.writeFile(`${this.functionsFolder}book_list.mcfunction`, bookListTemplate, (err) => {
             logHandler.error(err);
             logHandler.log(`booklist updated for gameloop`);
+        });
+    },
+
+    generateDocs: function() {
+        let Twig = require('twig'),
+            templateFilename = path.join(__dirname, 'templates/docs_template.twig'),
+            docTemplate = Twig.twig({
+                path: templateFilename,
+                async: false,
+                autoescape: true
+            });
+
+        let template = docTemplate
+            .render({books: this.booksDetails})
+            .toString();
+
+        fs.writeFile(`docs/index.html`, template, (err) => {
+            logHandler.error(err);
+            logHandler.log(`docs generated`);
         });
     }
 
