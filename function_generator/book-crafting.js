@@ -107,7 +107,7 @@ _.extend(bookCrafting.prototype, {
             .render({books: this.booksDetails})
             .toString();
 
-        fs.writeFile(`docs/index.html`, template, (err) => {
+        fs.writeFile(`index.html`, template, (err) => {
             logHandler.error(err);
             logHandler.log(`docs generated`);
         });
