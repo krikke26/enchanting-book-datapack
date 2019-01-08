@@ -55,14 +55,20 @@ _.extend(bookCrafting.prototype, {
 
             bookTemplate = bookTemplate.replace("[$ingredient_1_name]", content.main_options.ingredient_1.name);
             bookTemplate = bookTemplate.replace("[$ingredient_1_output_name]", content.main_options.ingredient_1.output_name);
+            bookTemplate = bookTemplate.replace("[$ingredient_1_output_name]", content.main_options.ingredient_1.output_name);
             bookTemplate = bookTemplate.replace("[$ingredient_1_count]", book.ingredient_1_count);
 
             bookTemplate = bookTemplate.replace("[$ingredient_2_name]", content.main_options.ingredient_2.name);
             bookTemplate = bookTemplate.replace("[$ingredient_2_output_name]", content.main_options.ingredient_2.output_name);
+            bookTemplate = bookTemplate.replace("[$ingredient_2_output_name]", content.main_options.ingredient_2.output_name);
+            bookTemplate = bookTemplate.replace("[$ingredient_2_output_name]", content.main_options.ingredient_2.output_name);
             bookTemplate = bookTemplate.replace("[$ingredient_2_count]", book.ingredient_2_count);
 
             bookTemplate = bookTemplate.replace("[$stored_enchantments_id]", content.main_options.stored_enchantments_id);
-            bookTemplate = bookTemplate.replace("[$stored_enchantments_lvl]", book.stored_enchantments_lvl);
+            bookTemplate = bookTemplate.replace(/\[\$stored_enchantments_lvl\]/g, book.stored_enchantments_lvl);
+
+            let enchantId = (content.main_options.stored_enchantments_id).replace("minecraft:", "");
+            bookTemplate = bookTemplate.replace(/\[\$enchant_id\]/g, enchantId);
 
             //save each book to file
             let outputFileName = book.name;

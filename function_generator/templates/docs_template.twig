@@ -42,7 +42,7 @@
             <a class="btn btn-primary " href="https://github.com/krike/enchanting-book-datapack" role="button">
                 View on github
             </a>
-            <a class="btn btn-primary" href="https://github.com/krike/enchanting-book-datapack/releases/tag/0.0.1" role="button">
+            <a class="btn btn-primary" href="https://github.com/krike/enchanting-book-datapack/releases/" role="button">
                 Download
             </a>
         </div>
@@ -80,13 +80,14 @@
                     <tbody>
                     {% for book in bookInfo.books %}
                         <tr>
-                            <td>
-                                <ul>
-                                    <li>{{ book.ingredient_1_count }} {{ bookInfo.main_options.ingredient_1.name|replace({"minecraft:": "", "_": " "})|capitalize }}</li>
-                                    <li>{{ book.ingredient_2_count }} {{ bookInfo.main_options.ingredient_2.name|replace({"minecraft:": "", "_": " "})|capitalize }}</li>
-                                </ul>
-                            </td>
                             <td>{{ book.name }}</td>
+                            <td>
+                                {{ book.ingredient_1_count }} {{ bookInfo.main_options.ingredient_1.name|replace({"minecraft:": "", "_": " "})|capitalize }}
+                                <br />
+                                {{ book.ingredient_2_count }} {{ bookInfo.main_options.ingredient_2.name|replace({"minecraft:": "", "_": " "})|capitalize }}
+                                <br />
+                                1 Book and Quill
+                            </td>
                         </tr>
                     {% endfor %}
                     </tbody>

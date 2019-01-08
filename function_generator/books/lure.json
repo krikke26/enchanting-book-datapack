@@ -1,7 +1,7 @@
 {
     "main_options": {
         "ingredient_1": {
-            "name": "minecraft:fish",
+            "name": "minecraft:cod",
             "output_name": "drop_fish"
         },
         "ingredient_2": {

@@ -1,8 +1,8 @@
 {
     "main_options": {
         "ingredient_1": {
-            "name": "minecraft:waterlilly",
-            "output_name": "drop_waterlilly"
+            "name": "minecraft:lily_pad",
+            "output_name": "drop_lily_pad"
         },
         "ingredient_2": {
             "name": "minecraft:lapis_lazuli",
