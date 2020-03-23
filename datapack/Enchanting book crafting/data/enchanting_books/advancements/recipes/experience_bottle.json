@@ -26,12 +26,12 @@
                 ]
             }
         },
-        "has_cactus_green": {
+        "has_green_dye": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
-                        "item": "minecraft:cactus_green"
+                        "item": "minecraft:green_dye"
                     }
                 ]
             }
@@ -47,7 +47,7 @@
         [
             "has_slime",
             "has_bottle",
-            "has_cactus_green",
+            "has_green_dye",
             "has_the_recipe"
         ]
     ]
