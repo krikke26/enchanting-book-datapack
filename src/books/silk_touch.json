@@ -1,8 +1,8 @@
 {
     "main_options": {
         "ingredient_1": {
-            "name": "minecraft:feather",
-            "output_name": "drop_feather"
+            "name": "minecraft:web",
+            "output_name": "drop_web"
         },
         "ingredient_2": {
             "name": "minecraft:lapis_lazuli",
@@ -13,8 +13,8 @@
     "books": [
         {
             "name": "Silk Touch",
-            "ingredient_1_count": 16,
-            "ingredient_2_count": 4,
+            "ingredient_1_count": 8,
+            "ingredient_2_count": 32,
             "stored_enchantments_lvl": 1
         }
     ]
