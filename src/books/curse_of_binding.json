@@ -1,8 +1,8 @@
 {
     "main_options": {
         "ingredient_1": {
-            "name": "minecraft:slime_ball",
-            "output_name": "drop_slime_ball"
+            "name": "minecraft:sticky_piston",
+            "output_name": "drop_sticky_piston"
         },
         "ingredient_2": {
             "name": "minecraft:lapis_lazuli",
