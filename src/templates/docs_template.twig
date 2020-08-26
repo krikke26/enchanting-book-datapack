@@ -28,83 +28,92 @@
         section {
             margin: 30px 0;
         }
+        .ingredients tr {
+            background: #efefef;
+        }
+        .ingredients img {
+            width: 32px;
+            height: 32px;
+        }
     </style>
 </head>
 <body>
-    <div class="jumbotron text-center">
-        <div class="container">
-            <h1 class="display-4">
-                Enchanter datapack
-            </h1>
-            <p class="lead">
-                Minecrat Datapack to "craft" enchanting books.
-            </p>
-            <a class="btn btn-primary " href="https://github.com/krike/enchanting-book-datapack" role="button">
-                View on github
-            </a>
-            <a class="btn btn-primary" href="https://github.com/krike/enchanting-book-datapack/releases/" role="button">
-                Download
-            </a>
-        </div>
-    </div>
+<div class="jumbotron text-center">
     <div class="container">
-        <section>
+        <h1 class="display-4">
+            Enchanter datapack
+        </h1>
+        <p class="lead">
+            Minecrat Datapack to "craft" enchanting books.
+        </p>
+        <a class="btn btn-primary " href="https://github.com/krike/enchanting-book-datapack" role="button">
+            View on github
+        </a>
+        <a class="btn btn-primary" href="https://github.com/krike/enchanting-book-datapack/releases/" role="button">
+            Download
+        </a>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
             <h2>Install</h2>
             <ul>
                 <li>Download latest version</li>
                 <li>Place the zip file in the datapack folder of your world</li>
                 <li>Start crafting! :)</li>
             </ul>
-        </section>
-        <hr />
-        <section>
-            <h2>How to use</h2>
+        </div>
+        <div class="col-sm-6">
+            <h2>How to use?</h2>
             <p>
-                Unfortunatly it is not possible to craft enchanting books the regular way using a crafting
-                table therefore the way to use this datapack is to ... just drop the ingredients on the ground together :).
+                Drop the ingredients on the ground together.
                 The game tick will detect and drop a book based on the ingredients dropped.
+                It must be the exact amount described in the list below.
             </p>
-        </section>
-        <section>
-            <h2>Custom recipe</h2>
-            <p>
-                This datapack also include a custom recipe to create XP bottles.<br />
-                <img src="assets/xp_recipe.png" alt="XP bottle recipe" />
-            </p>
-        </section>
-        <hr />
-        <section>
-            <h2>Recipes</h2>
-            {% for bookInfo in books %}
-                <h5>{{ bookInfo.books[0].name }}</h5>
-                <table cellpadding="5" cellspacing="0" border="0" class="table">
-                    <thead class="thead-dark">
-                    <tr>
-                        <th>Ingredients</th>
-                        <th>Book</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    {% for book in bookInfo.books %}
-                        <tr>
-                            <td>{{ book.name }}</td>
-                            <td>
-                                {{ book.ingredient_1_count }} {{ bookInfo.main_options.ingredient_1.name|replace({"minecraft:": "", "_": " "})|capitalize }}
-                                <br />
-                                {{ book.ingredient_2_count }} {{ bookInfo.main_options.ingredient_2.name|replace({"minecraft:": "", "_": " "})|capitalize }}
-                                <br />
-                                1 Book and Quill
-                            </td>
-                        </tr>
-                    {% endfor %}
-                    </tbody>
-                </table>
-            {% endfor %}
-
-        </section>
+        </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <section>
+        <h2>Custom recipe</h2>
+        <p>
+            This datapack also include a custom recipe to create XP bottles.<br />
+            <img src="assets/xp_recipe.png" alt="XP bottle recipe" />
+        </p>
+    </section>
+    <hr />
+    <section>
+        <h2>Recipes</h2>
+        <table cellpadding="5" cellspacing="0" border="0" class="table ingredients">
+            <thead class="thead-dark">
+            <tr>
+                <th>Book</th>
+                <th>Ingredients</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for bookInfo in books %}
+                {% for book in bookInfo.books %}
+                    <tr>
+                        <td>{{ book.name }}</td>
+                        <td>
+                            <strong>{{ book.ingredient_1_count }}x</strong>
+                            {% set book1icon = bookInfo.main_options.ingredient_1.name|replace({"minecraft:": ""}) %}
+                            <img src="assets/icons/{{ book1icon }}.png" title="{{ book1icon }}" alt="{{ book1icon }}" />,
+                            <strong>{{ book.ingredient_2_count }}x</strong>
+                            {% set book2icon = bookInfo.main_options.ingredient_2.name|replace({"minecraft:": ""}) %}
+                            <img src="assets/icons/{{ book2icon }}.png" title="{{ book2icon }}" alt="{{ book2icon }}" />,
+                            <strong>1x </strong>
+                            <img src="assets/icons/book_quill.png" style="width: 32px; height: 32px;" title="book_quill" alt="book_quill" />
+                        </td>
+                    </tr>
+                {% endfor %}
+            {% endfor %}
+            </tbody>
+        </table>
+    </section>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 </body>
 </html>
