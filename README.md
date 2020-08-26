@@ -9,7 +9,7 @@ Head over to <a href="https://krike.github.io/enchanting-book-datapack/">krike.g
 # For developers
 Requirement:
 
-- Node v11.1.0
+- Node v12
 ### Generate book function files
 
 Run:
