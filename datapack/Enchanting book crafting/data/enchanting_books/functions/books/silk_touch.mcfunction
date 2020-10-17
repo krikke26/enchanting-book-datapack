@@ -1,6 +1,6 @@
 #Silk Touch book
 
-execute as @r at @s as @e[type=item,distance=..6,nbt={OnGround:1b,Item:{id:"minecraft:web",Count:8b}}] at @s run tag @s add drop_web_silk_touch_1
+execute as @r at @s as @e[type=item,distance=..6,nbt={OnGround:1b,Item:{id:"minecraft:cobweb",Count:8b}}] at @s run tag @s add drop_web_silk_touch_1
 execute as @r at @s as @e[type=item,distance=..6,nbt={OnGround:1b,Item:{id:"minecraft:lapis_lazuli",Count:32b}}] at @s run tag @s add drop_lapis_lazuli_silk_touch_1
 execute as @r at @s as @e[type=item,distance=..6,nbt={OnGround:1b,Item:{id:"minecraft:writable_book",Count:1b}}] at @s run tag @s add drop_writable_book_silk_touch_1
 
