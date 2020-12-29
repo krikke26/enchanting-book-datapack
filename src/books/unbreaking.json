@@ -13,19 +13,19 @@
     "books": [
         {
             "name": "Unbreaking I",
-            "ingredient_1_count": 16,
+            "ingredient_1_count": 4,
             "ingredient_2_count": 4,
             "stored_enchantments_lvl": 1
         },
         {
             "name": "Unbreaking II",
-            "ingredient_1_count": 32,
+            "ingredient_1_count": 16,
             "ingredient_2_count": 8,
             "stored_enchantments_lvl": 2
         },
         {
             "name": "Unbreaking III",
-            "ingredient_1_count": 48,
+            "ingredient_1_count": 24,
             "ingredient_2_count": 12,
             "stored_enchantments_lvl": 3
         }

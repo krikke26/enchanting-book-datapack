@@ -1,6 +1,6 @@
 #Unbreaking I book
 
-execute as @r at @s as @e[type=item,distance=..6,nbt={OnGround:1b,Item:{id:"minecraft:obsidian",Count:16b}}] at @s run tag @s add drop_obsidian_unbreaking_1
+execute as @r at @s as @e[type=item,distance=..6,nbt={OnGround:1b,Item:{id:"minecraft:obsidian",Count:4b}}] at @s run tag @s add drop_obsidian_unbreaking_1
 execute as @r at @s as @e[type=item,distance=..6,nbt={OnGround:1b,Item:{id:"minecraft:lapis_lazuli",Count:4b}}] at @s run tag @s add drop_lapis_lazuli_unbreaking_1
 execute as @r at @s as @e[type=item,distance=..6,nbt={OnGround:1b,Item:{id:"minecraft:writable_book",Count:1b}}] at @s run tag @s add drop_writable_book_unbreaking_1
 
