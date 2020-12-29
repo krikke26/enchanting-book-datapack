@@ -8,23 +8,23 @@
             "name": "minecraft:lapis_lazuli",
             "output_name": "drop_lapis_lazuli"
         },
-        "stored_enchantments_id": "minecraft:loyality"
+        "stored_enchantments_id": "minecraft:loyalty"
     },
     "books": [
         {
-            "name": "Loyality I",
+            "name": "Loyalty I",
             "ingredient_1_count": 8,
             "ingredient_2_count": 4,
             "stored_enchantments_lvl": 1
         },
         {
-            "name": "Loyality II",
+            "name": "Loyalty II",
             "ingredient_1_count": 16,
             "ingredient_2_count": 8,
             "stored_enchantments_lvl": 2
         },
         {
-            "name": "Loyality III",
+            "name": "Loyalty III",
             "ingredient_1_count": 24,
             "ingredient_2_count": 12,
             "stored_enchantments_lvl": 3
