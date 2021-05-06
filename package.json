@@ -19,6 +19,6 @@
     "homepage": "https://github.com/krike/enchanting-book-datapack#readme",
     "devDependencies": {
         "twig": "^1.12.0",
-        "underscore": "^1.9.1"
+        "underscore": "^1.12.1"
     }
 }
