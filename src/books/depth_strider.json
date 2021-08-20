@@ -1,8 +1,8 @@
 {
     "main_options": {
         "ingredient_1": {
-            "name": "minecraft:water_bucket",
-            "output_name": "drop_water_bucket"
+            "name": "minecraft:light_blue_dye",
+            "output_name": "drop_light_blue_dye"
         },
         "ingredient_2": {
             "name": "minecraft:lapis_lazuli",
@@ -13,19 +13,19 @@
     "books": [
         {
             "name": "Depth Strider I",
-            "ingredient_1_count": 1,
+            "ingredient_1_count": 4,
             "ingredient_2_count": 4,
             "stored_enchantments_lvl": 1
         },
         {
             "name": "Depth Strider II",
-            "ingredient_1_count": 2,
+            "ingredient_1_count": 8,
             "ingredient_2_count": 8,
             "stored_enchantments_lvl": 2
         },
         {
             "name": "Depth Strider III",
-            "ingredient_1_count": 3,
+            "ingredient_1_count": 12,
             "ingredient_2_count": 12,
             "stored_enchantments_lvl": 3
         }

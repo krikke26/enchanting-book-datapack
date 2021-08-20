@@ -1,8 +1,8 @@
 {
     "main_options": {
         "ingredient_1": {
-            "name": "minecraft:lava_bucket",
-            "output_name": "drop_lava_bucket"
+            "name": "minecraft:magma_cream",
+            "output_name": "drop_magma_cream"
         },
         "ingredient_2": {
             "name": "minecraft:lapis_lazuli",
@@ -13,8 +13,8 @@
     "books": [
         {
             "name": "Curse of Vanishing",
-            "ingredient_1_count": 4,
-            "ingredient_2_count": 4,
+            "ingredient_1_count": 32,
+            "ingredient_2_count": 16,
             "stored_enchantments_lvl": 1
         }
     ]
