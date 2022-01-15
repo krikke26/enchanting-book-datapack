@@ -1,18 +1,20 @@
 {
-    "name": "enchanting-book-crafting",
-    "version": "1.0.5",
-    "description": "This datapack for minecraft allows you to \"craft\" enchanting books.",
+    "name": "enchanting-books",
+    "author": "Christophe Debruel",
+    "license": "MIT",
+    "version": "1.1.0",
+    "description": "This datapack for minecraft allows you to \"craft\" or trade enchanting books.",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "node index.js",
+        "build": "yarn build-book-crafting; yarn build-villager-trades",
+        "build-book-crafting": "node src/book-crafting.js",
+        "build-villager-trades": "node src/villagers-trades.js",
         "postversion": "git push --tags && git push && echo \"Successfully released version $npm_package_version!\""
     },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/krike/enchanting-book-datapack.git"
     },
-    "author": "Christophe Debruel",
-    "license": "MIT",
     "bugs": {
         "url": "https://github.com/krike/enchanting-book-datapack/issues"
     },

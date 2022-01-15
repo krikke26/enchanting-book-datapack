@@ -1,0 +1,20 @@
+{
+    "all": "{VillagerData:{profession:librarian,level:5,type:plains},PersistenceRequired:1,Silent:1,NoAI:1,CustomName:'All enchantment trades,Offers:{Recipes:[]}}",
+    "all_high_tier": "/summon <all high tier enchant trades>",
+    "low_tier": "/summon <all low tier enchant trades>",
+    "tier_1": "/summon <all tier I enchant trades>",
+    "tier_2": "/summon <all tier II enchant trades>",
+    "tier_3": "/summon <all tier III enchant trades>",
+    "tier_4": "/summon <all tier IV enchant trades>",
+    "tier_5": "/summon <all tier V enchant trades>",
+    "helmet_enchants": "/summon",
+    "armour_enchants": "/summon ",
+    "leggings_enchants": "/summon ",
+    "boots_enchants": "/summon",
+    "sword_enchants": "/summon",
+    "axe_enchants": "/summon",
+    "pickaxe_enchants": "/summon",
+    "bow_enchants": "/summon",
+    "shovel_enchants": "/summon",
+    "other_enchants": "/summon (hoe + other tools"
+}

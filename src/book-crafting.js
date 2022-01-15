@@ -6,7 +6,7 @@ let fs = require("fs"),
 
 _.extend(bookCrafting.prototype, {
     bookFolder: "./src/books/",
-    functionsFolder: "./datapack/Enchanting book crafting/data/enchanting_books/functions/",
+    functionsFolder: "./datapacks/Enchanting book crafting/data/enchanting_books/functions/",
     outputFolder: "",
     bookList: [],
     booksDetails: [],
@@ -15,7 +15,6 @@ _.extend(bookCrafting.prototype, {
         this.outputFolder = `${this.functionsFolder}books/`;
         this.fetchTemplate();
         this.fetchBookInfo();
-
     },
 
     fetchTemplate: function() {
@@ -121,4 +120,4 @@ _.extend(bookCrafting.prototype, {
 
 });
 
-module.exports = new bookCrafting();
+new bookCrafting();
