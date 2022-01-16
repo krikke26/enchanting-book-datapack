@@ -8,7 +8,8 @@
             "name": "minecraft:lapis_lazuli",
             "output_name": "drop_lapis_lazuli"
         },
-        "stored_enchantments_id": "minecraft:fire_protection"
+        "stored_enchantments_id": "minecraft:fire_protection",
+        "enchant_type": ["helmet", "chestplate", "legging", "boot"]
     },
     "books": [
         {

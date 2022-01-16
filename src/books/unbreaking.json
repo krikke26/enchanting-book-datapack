@@ -8,7 +8,8 @@
             "name": "minecraft:lapis_lazuli",
             "output_name": "drop_lapis_lazuli"
         },
-        "stored_enchantments_id": "minecraft:unbreaking"
+        "stored_enchantments_id": "minecraft:unbreaking",
+        "enchant_type": ["sword", "other", "bow", "pickaxe", "shovel", "axe", "helmet", "chestplate", "legging", "boot"]
     },
     "books": [
         {

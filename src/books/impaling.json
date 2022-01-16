@@ -8,7 +8,8 @@
             "name": "minecraft:lapis_lazuli",
             "output_name": "drop_lapis_lazuli"
         },
-        "stored_enchantments_id": "minecraft:impaling"
+        "stored_enchantments_id": "minecraft:impaling",
+        "enchant_type": ["other"]
     },
     "books": [
         {

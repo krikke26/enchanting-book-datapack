@@ -8,7 +8,8 @@
             "name": "minecraft:lapis_lazuli",
             "output_name": "drop_lapis_lazuli"
         },
-        "stored_enchantments_id": "minecraft:silk_touch"
+        "stored_enchantments_id": "minecraft:silk_touch",
+        "enchant_type": ["pickaxe", "shovel", "axe" ,"other"]
     },
     "books": [
         {

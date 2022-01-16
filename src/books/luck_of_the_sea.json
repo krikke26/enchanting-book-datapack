@@ -8,7 +8,8 @@
             "name": "minecraft:lapis_lazuli",
             "output_name": "drop_lapis_lazuli"
         },
-        "stored_enchantments_id": "minecraft:luck_of_the_sea"
+        "stored_enchantments_id": "minecraft:luck_of_the_sea",
+        "enchant_type": ["other"]
     },
     "books": [
         {
