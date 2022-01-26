@@ -31,7 +31,9 @@ _.extend(bookCrafting.prototype, {
                 fs.readFile(this.bookFolder + filename, 'utf-8', (err, content) => {
                     this.booksDetails.push(JSON.parse(content));
                     this.generateFunctionFile(filename, content);
-                    logHandler.error(err);
+                    if (err) {
+                        logHandler.error(err);
+                    }
                 });
             });
         });
@@ -77,8 +79,11 @@ _.extend(bookCrafting.prototype, {
             outputFileName = outputFileName + ".mcfunction";
 
             fs.writeFile(this.outputFolder + outputFileName, bookTemplate, (err) => {
-                logHandler.error(err);
-                logHandler.log(`file for ${outputFileName} created`);
+                if (err) {
+                    logHandler.error(err);
+                } else {
+                    logHandler.log(`file for ${outputFileName} created`);
+                }
             });
         });
     },
@@ -94,8 +99,11 @@ _.extend(bookCrafting.prototype, {
             bookListTemplate += `function enchanting_books:books/${bookName}\n`;
         });
         fs.writeFile(`${this.functionsFolder}book_list.mcfunction`, bookListTemplate, (err) => {
-            logHandler.error(err);
-            logHandler.log(`booklist updated for gameloop`);
+            if (err) {
+                logHandler.error(err);
+            } else {
+                logHandler.log(`booklist updated for gameloop`);
+            }
         });
     },
 
@@ -113,8 +121,11 @@ _.extend(bookCrafting.prototype, {
             .toString();
 
         fs.writeFile(`index.html`, template, (err) => {
-            logHandler.error(err);
-            logHandler.log(`docs generated`);
+            if (err) {
+                logHandler.error(err);
+            } else {
+                logHandler.log(`docs generated`);
+            }
         });
     }
 

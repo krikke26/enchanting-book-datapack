@@ -1,20 +1,47 @@
 const bookFolder = "./src/books/";
-const logHandler = require("./Utils/log_handler")
+const logHandler = require("./log_handler");
+const fs = require("fs");
+const queue = require("queue");
 
-module.exports = {
-    getBookList: () => {
+
+class BookUtils {
+
+    getBookList() {
         return new Promise((resolve, reject) => {
-            const booksDetails = [];
-            fs.readdir(bookFolder, (err, filenames) => {
-                logHandler.error(err);
-                filenames.forEach((filename) => {
-                    fs.readFile(this.bookFolder + filename, 'utf-8', (err, content) => {
-                        booksDetails.push(JSON.parse(content));
-                        logHandler.error(err);
-                    });
-                });
+            const bookFolder = "./src/books/";
+            const q = queue({
+                results: []
             });
-            resolve(booksDetails);
+            fs.readdir(bookFolder, (err, filenames) => {
+                if (err) {
+                    logHandler.error(err);
+                } else {
+                    filenames.forEach((filename) => {
+                        // if (filename === "unbreaking.json") {
+                            q.push(function () {
+                                return new Promise((resolve, reject) => {
+                                    fs.readFile(bookFolder + filename, 'utf-8', (err, content) => {
+                                        resolve(JSON.parse(content));
+                                    });
+                                });
+                            });
+                        // }
+                    });
+                    // start queue
+                    q.start((err) => {
+                        if (err) {
+                            throw err;
+                        }
+                        const bookList = [];
+                        q.results.forEach(book => {
+                            bookList.push(book[0]);
+                        })
+                        resolve(bookList);
+                    });
+                }
+            });
         });
-    },
+    }
 };
+
+module.exports = new BookUtils();

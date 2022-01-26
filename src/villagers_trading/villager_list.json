@@ -1,20 +1,85 @@
 {
-    "all": "{VillagerData:{profession:librarian,level:5,type:plains},PersistenceRequired:1,Silent:1,NoAI:1,CustomName:'All enchantment trades,Offers:{Recipes:[]}}",
-    "all_high_tier": "/summon <all high tier enchant trades>",
-    "low_tier": "/summon <all low tier enchant trades>",
-    "tier_1": "/summon <all tier I enchant trades>",
-    "tier_2": "/summon <all tier II enchant trades>",
-    "tier_3": "/summon <all tier III enchant trades>",
-    "tier_4": "/summon <all tier IV enchant trades>",
-    "tier_5": "/summon <all tier V enchant trades>",
-    "helmet_enchants": "/summon",
-    "armour_enchants": "/summon ",
-    "leggings_enchants": "/summon ",
-    "boots_enchants": "/summon",
-    "sword_enchants": "/summon",
-    "axe_enchants": "/summon",
-    "pickaxe_enchants": "/summon",
-    "bow_enchants": "/summon",
-    "shovel_enchants": "/summon",
-    "other_enchants": "/summon (hoe + other tools"
+    "all": {
+        "title": "All enchant trades",
+        "color": "aqua"
+    },
+    "all_high_tier": {
+        "title": "All HIGH tier enchant trades",
+        "color": "aqua"
+    },
+    "tier_1": {
+        "title": "All tier 1 enchant trades",
+        "stored_enchantments_lvl": 1,
+        "color": "aqua"
+    },
+    "tier_2": {
+        "title": "All tier 2 enchant trades",
+        "stored_enchantments_lvl": 2,
+        "color": "aqua"
+    },
+    "tier_3": {
+        "title": "All tier 3 enchant trades",
+        "stored_enchantments_lvl": 3,
+        "color": "aqua"
+    },
+    "tier_4": {
+        "title": "All tier 4 enchant trades",
+        "stored_enchantments_lvl": 4,
+        "color": "aqua"
+    },
+    "tier_5": {
+        "title": "All tier 5 enchant trades",
+        "stored_enchantments_lvl": 5,
+        "color": "aqua"
+    },
+    "helmet_enchants": {
+        "title": "All HIGH tier enchant trades",
+        "type": "helmet",
+        "color": "aqua"
+    },
+    "chestplate_enchants": {
+        "title": "All chestplate enchant trades",
+        "type": "chestplate",
+        "color": "aqua"
+    },
+    "leggings_enchants": {
+        "title": "All legging enchant trades",
+        "type": "legging",
+        "color": "aqua"
+    },
+    "boots_enchants": {
+        "title": "All boots enchant trades",
+        "type": "boot",
+        "color": "aqua"
+    },
+    "sword_enchants": {
+        "title": "All sword enchant trades",
+        "type": "sword",
+        "color": "aqua"
+    },
+    "axe_enchants": {
+        "title": "All axe enchant trades",
+        "type": "axe",
+        "color": "aqua"
+    },
+    "pickaxe_enchants": {
+        "title": "All pickaxe enchant trades",
+        "type": "pickaxe",
+        "color": "aqua"
+    },
+    "bow_enchants": {
+        "title": "All bow enchant trades",
+        "type": "bow",
+        "color": "aqua"
+    },
+    "shovel_enchants": {
+        "title": "All shovel enchant trades",
+        "type": "shovel",
+        "color": "aqua"
+    },
+    "other_enchants": {
+        "title": "All other enchant trades",
+        "type": "other",
+        "color": "aqua"
+    }
 }
