@@ -3,7 +3,7 @@
     "author": "Christophe Debruel",
     "license": "MIT",
     "version": "1.1.0",
-    "description": "This datapack for minecraft allows you to \"craft\" or trade enchanting books.",
+    "description": "A datapack to \"craft\" or trade enchanting books.",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "yarn build-book-crafting; yarn build-villager-trades",
