@@ -1,84 +1,84 @@
 {
     "all": {
-        "title": "All enchant trades",
+        "title": "Enchant trades",
         "color": "aqua"
     },
     "all_high_tier": {
-        "title": "All HIGH tier enchant trades",
+        "title": "HIGH tier enchant trades",
         "color": "aqua"
     },
     "tier_1": {
-        "title": "All tier 1 enchant trades",
+        "title": "Tier 1 enchant trades",
         "stored_enchantments_lvl": 1,
         "color": "aqua"
     },
     "tier_2": {
-        "title": "All tier 2 enchant trades",
+        "title": "Tier 2 enchant trades",
         "stored_enchantments_lvl": 2,
         "color": "aqua"
     },
     "tier_3": {
-        "title": "All tier 3 enchant trades",
+        "title": "Tier 3 enchant trades",
         "stored_enchantments_lvl": 3,
         "color": "aqua"
     },
     "tier_4": {
-        "title": "All tier 4 enchant trades",
+        "title": "Tier 4 enchant trades",
         "stored_enchantments_lvl": 4,
         "color": "aqua"
     },
     "tier_5": {
-        "title": "All tier 5 enchant trades",
+        "title": "Tier 5 enchant trades",
         "stored_enchantments_lvl": 5,
         "color": "aqua"
     },
     "helmet_enchants": {
-        "title": "All HIGH tier enchant trades",
+        "title": "Helmet enchant trades",
         "type": "helmet",
         "color": "aqua"
     },
     "chestplate_enchants": {
-        "title": "All chestplate enchant trades",
+        "title": "Chestplate enchant trades",
         "type": "chestplate",
         "color": "aqua"
     },
     "leggings_enchants": {
-        "title": "All legging enchant trades",
+        "title": "Legging enchant trades",
         "type": "legging",
         "color": "aqua"
     },
     "boots_enchants": {
-        "title": "All boots enchant trades",
+        "title": "Boots enchant trades",
         "type": "boot",
         "color": "aqua"
     },
     "sword_enchants": {
-        "title": "All sword enchant trades",
+        "title": "Sword enchant trades",
         "type": "sword",
         "color": "aqua"
     },
     "axe_enchants": {
-        "title": "All axe enchant trades",
+        "title": "Axe enchant trades",
         "type": "axe",
         "color": "aqua"
     },
     "pickaxe_enchants": {
-        "title": "All pickaxe enchant trades",
+        "title": "Pickaxe enchant trades",
         "type": "pickaxe",
         "color": "aqua"
     },
     "bow_enchants": {
-        "title": "All bow enchant trades",
+        "title": "bow enchant trades",
         "type": "bow",
         "color": "aqua"
     },
     "shovel_enchants": {
-        "title": "All shovel enchant trades",
+        "title": "Shovel enchant trades",
         "type": "shovel",
         "color": "aqua"
     },
     "other_enchants": {
-        "title": "All other enchant trades",
+        "title": "Other enchant trades",
         "type": "other",
         "color": "aqua"
     }
