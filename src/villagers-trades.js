@@ -39,12 +39,22 @@ _.extend(villagerTrades.prototype, {
     createVillagersFunctions: function(villagerList) {
         villagerList = JSON.parse(villagerList);
         (Object.keys(villagerList)).forEach(key => {
-            if (["all_high_tier", "tier_1", "tier_2" , "tier_3", "tier_4", "tier_5"].includes(key)) {
+            // if (["all", "all_high_tier", "tier_1", "tier_2" , "tier_3", "tier_4", "tier_5", "helmet_enchants"].includes(key)) {
                 let villagerTrader = villagerList[key];
-                let vInfo = this.villagerInfo;
+
+                // get the base villager info object
+                let vInfo = {...this.villagerInfo};
+
+                // get all the available enchant books info
                 let bookList = JSON.parse(JSON.stringify(this.books));
+
+                // set custom title for villager trader
                 vInfo.CustomName = vInfo.CustomName.replace("[NAME]", villagerTrader.title);
+
+                //create recipes for villager trader
                 vInfo.Offers.Recipes = this.buildRecipes(bookList, key, villagerTrader);
+
+                // write village summon code to file
                 const outputFilePath = `${this.outputFolder}${key}.mcfunction`;
                 fs.writeFile(outputFilePath, `summon villager ~ ~ ~ ${JSON.stringify(vInfo)}`, (err) => {
                     if (err) {
@@ -53,31 +63,39 @@ _.extend(villagerTrades.prototype, {
                         logHandler.log(`file for ${key} created`);
                     }
                 });
-            }
+            // }
         });
     },
 
     buildRecipes: function(bookList, key, villagerTrader) {
         logHandler.log(`BUILD RECIPE FOR ${key}`);
         const recipeList = [];
-        switch(key) {
-            case "all_high_tier":
-                bookList.forEach((book, bookKey) => {
-                    const books = book.books;
-                    if (books.length > 1) {
-                        const lastBook = books[books.length - 1];
-                        bookList[bookKey].books = [lastBook];
-                    }
-                });
-                break;
-            case "tier_1":
-            case "tier_2":
-            case "tier_3":
-            case "tier_4":
-            case "tier_5":
-                bookList = this.filterBooksByTier(bookList, villagerTrader.stored_enchantments_lvl);
-                break;
+
+        if (typeof villagerTrader.type !== "undefined") {
+            // if villagerInfo has type object -> filter by type
+            bookList = this.filterBooksByType(bookList, villagerTrader.type);
+        } else {
+            // filter booklist by keyname
+            switch(key) {
+                case "all_high_tier":
+                    bookList.forEach((book, bookKey) => {
+                        const books = book.books;
+                        if (books.length > 1) {
+                            const lastBook = books[books.length - 1];
+                            bookList[bookKey].books = [lastBook];
+                        }
+                    });
+                    break;
+                case "tier_1":
+                case "tier_2":
+                case "tier_3":
+                case "tier_4":
+                case "tier_5":
+                    bookList = this.filterBooksByTier(bookList, villagerTrader.stored_enchantments_lvl);
+                    break;
+            }
         }
+
         bookList.forEach(book => {
             const recipeObjects = this._createRecipeObject(book);
             recipeObjects.forEach(recipe => {
@@ -90,10 +108,21 @@ _.extend(villagerTrades.prototype, {
 
     filterBooksByTier: function(bookList, tier) {
         bookList.forEach((book, bookKey) => {
-            const books = [...book.books];
+            const books = book.books;
             bookList[bookKey].books = books.filter(x => x.stored_enchantments_lvl === tier);
         });
         return bookList;
+    },
+
+    filterBooksByType: function(bookList, type) {
+        const newBookList = [];
+        bookList.forEach((book, bookKey) => {
+            if (book.main_options.enchant_type.includes(type)) {
+                newBookList.push(book);
+            }
+        });
+
+        return newBookList;
     },
 
     _createRecipeObject(bookInfo) {
