@@ -20,5 +20,6 @@
     "devDependencies": {
         "twig": "^1.12.0",
         "underscore": "^1.9.1"
-    }
+    },
+    "packageManager": "yarn@3.4.0"
 }
