@@ -5,8 +5,8 @@ let fs = require("fs"),
     bookCrafting = function() { };
 
 _.extend(bookCrafting.prototype, {
-    bookFolder: "./src/books/",
-    functionsFolder: "./datapack/Enchanting book crafting/data/enchanting_books/functions/",
+    bookFolder: "./src/data/books/",
+    functionsFolder: "./datapacks/Enchanting book crafting/data/enchanting_books/functions/",
     outputFolder: "",
     bookList: [],
     booksDetails: [],
@@ -19,7 +19,7 @@ _.extend(bookCrafting.prototype, {
     },
 
     fetchTemplate: function() {
-        fs.readFile("./src/template.mcfunction", 'utf-8', (err, template) => {
+        fs.readFile("./src/templates/book.mcfunction", 'utf-8', (err, template) => {
             logHandler.error(err);
             this.fileTemplate = template;
         });

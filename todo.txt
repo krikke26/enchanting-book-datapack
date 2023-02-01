@@ -1,0 +1,9 @@
+Datapack:
+[ ] Add option to make echanting book crafting optional with toggle command
+[ ] Update github main page
+[ ] Update designs for planetminecraft
+
+Project:
+[x] Move to yarn 2
+[ ] rename datapacks folder to dist
+[ ] refactor src folder structure
