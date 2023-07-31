@@ -1,9 +1,6 @@
 TODO programming:
 
 Datapack:
-[ ] Add option to make echanting book crafting optional with toggle command
-- https://www.reddit.com/r/Minecraft/comments/9u59wg/how_to_test_if_an_objective_already_exists/
-- https://www.youtube.com/watch?v=9j8nNL3oBWo&ab_channel=Legitimoose
 [ ] Update github main page
 
 Project:
