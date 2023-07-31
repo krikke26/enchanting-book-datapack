@@ -1,4 +1,4 @@
-const bookFolder = "./src/books/";
+const bookFolder = "./src/data/books/";
 const logHandler = require("./log_handler");
 const fs = require("fs");
 const queue = require("queue");
@@ -8,7 +8,7 @@ class BookUtils {
 
     getBookList() {
         return new Promise((resolve, reject) => {
-            const bookFolder = "./src/books/";
+            const bookFolder = "./src/data/books/";
             const q = queue({
                 results: []
             });
