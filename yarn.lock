@@ -38,10 +38,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"enchanting-book-crafting@workspace:.":
+"enchanting-books@workspace:.":
   version: 0.0.0-use.local
-  resolution: "enchanting-book-crafting@workspace:."
+  resolution: "enchanting-books@workspace:."
   dependencies:
+    queue: ^6.0.2
     twig: ^1.12.0
     underscore: ^1.9.1
   languageName: unknown
@@ -51,6 +52,13 @@ __metadata:
   version: 3.0.0
   resolution: "foreachasync@npm:3.0.0"
   checksum: 4791f64b539b06c751b14adb2881173c780d41ce37d881715a5e5787fa4a08961f2c6a6cf3bccdfa48e56fb91d8676d867fdc63c008cdb576bd33261716e8381
+  languageName: node
+  linkType: hard
+
+"inherits@npm:~2.0.3":
+  version: 2.0.4
+  resolution: "inherits@npm:2.0.4"
+  checksum: 4a48a733847879d6cf6691860a6b1e3f0f4754176e4d71494c41f3475553768b10f84b5ce1d40fbd0e34e6bfbb864ee35858ad4dd2cf31e02fc4a154b724d7f1
   languageName: node
   linkType: hard
 
@@ -67,6 +75,15 @@ __metadata:
   dependencies:
     brace-expansion: ^1.1.7
   checksum: 66ac295f8a7b59788000ea3749938b0970344c841750abd96694f80269b926ebcafad3deeb3f1da2522978b119e6ae3a5869b63b13a7859a456b3408bd18a078
+  languageName: node
+  linkType: hard
+
+"queue@npm:^6.0.2":
+  version: 6.0.2
+  resolution: "queue@npm:6.0.2"
+  dependencies:
+    inherits: ~2.0.3
+  checksum: ebc23639248e4fe40a789f713c20548e513e053b3dc4924b6cb0ad741e3f264dcff948225c8737834dd4f9ec286dbc06a1a7c13858ea382d9379f4303bcc0916
   languageName: node
   linkType: hard
 

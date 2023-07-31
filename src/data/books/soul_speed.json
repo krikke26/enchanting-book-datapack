@@ -8,7 +8,8 @@
             "name": "minecraft:lapis_lazuli",
             "output_name": "drop_lapis_lazuli"
         },
-        "stored_enchantments_id": "minecraft:soul_speed"
+        "stored_enchantments_id": "minecraft:soul_speed",
+        "enchant_type": ["boot"]
     },
     "books": [
         {

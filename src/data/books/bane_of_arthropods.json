@@ -8,7 +8,8 @@
             "name": "minecraft:lapis_lazuli",
             "output_name": "drop_lapis_lazuli"
         },
-        "stored_enchantments_id": "minecraft:bane_of_arthropods"
+        "stored_enchantments_id": "minecraft:bane_of_arthropods",
+        "enchant_type": ["sword"]
     },
     "books": [
         {

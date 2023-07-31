@@ -8,7 +8,8 @@
             "name": "minecraft:lapis_lazuli",
             "output_name": "drop_lapis_lazuli"
         },
-        "stored_enchantments_id": "minecraft:respiration"
+        "stored_enchantments_id": "minecraft:respiration",
+        "enchant_type": ["helmet"]
     },
     "books": [
         {

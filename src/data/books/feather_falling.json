@@ -8,7 +8,8 @@
             "name": "minecraft:lapis_lazuli",
             "output_name": "drop_lapis_lazuli"
         },
-        "stored_enchantments_id": "minecraft:feather_falling"
+        "stored_enchantments_id": "minecraft:feather_falling",
+        "enchant_type": ["boot"]
     },
     "books": [
         {
