@@ -6,7 +6,7 @@ let fs = require("fs"),
 
 _.extend(bookCrafting.prototype, {
     bookFolder: "./src/data/books/",
-    functionsFolder: "./datapacks/Enchanting book crafting/data/enchanting_books/functions/",
+    functionsFolder: "./dist/Enchanting book crafting/data/enchanting_books/functions/",
     outputFolder: "",
     bookList: [],
     booksDetails: [],

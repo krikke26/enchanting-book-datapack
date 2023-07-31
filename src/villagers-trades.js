@@ -5,7 +5,7 @@ let fs = require("fs"),
     villagerTrades = function() { };
 
 _.extend(villagerTrades.prototype, {
-    functionsFolder: "./datapacks/Enchanting book crafting/data/enchanting_books/functions/",
+    functionsFolder: "./dist/Enchanting book crafting/data/enchanting_books/functions/",
     outputFolder: "",
     books: [],
     villagerInfo: {
